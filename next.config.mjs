@@ -13,6 +13,17 @@ const nextConfig = {
     compiler: "modern",
     silenceDeprecations: ["legacy-js-api"],
   },
+
+  // 👇 Required for GitHub Pages
+  output: "export",
+  images: {
+    unoptimized: true,
+  },
+
+  // 👇 Only add these if repo is NOT username.github.io
+  // basePath: "/<repo-name>",
+  // assetPrefix: "/<repo-name>/",
 };
 
 export default withMDX(nextConfig);
+
