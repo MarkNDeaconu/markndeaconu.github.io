@@ -2,14 +2,14 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Logo } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
+  firstName: "Mark",
+  lastName: "Deaconu",
+  name: `Mark Deaconu`,
+  role: "Quantum Computing Researcher",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  email: "mark.deaconu@gmail.com",
+  location: "America/Toronto", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["English", "French", "Romainian"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter: Newsletter = {
@@ -29,7 +29,7 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
+    link: "https://github.com/MarkNDeaconu",
   },
   {
     name: "LinkedIn",
@@ -37,9 +37,9 @@ const social: Social = [
     link: "https://www.linkedin.com/company/once-ui/",
   },
   {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    name: "Youtube",
+    icon: "youtube",
+    link: "https://www.youtube.com/@markdeaconu1245",
   },
   {
     name: "Email",
@@ -54,7 +54,7 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Navigating wherever my curiosity will take me</>,
   featured: {
     display: true,
     title: (
@@ -66,13 +66,9 @@ const home: Home = {
   },
   subline: (
     <>
-      I'm Selene, a design engineer at{" "}
-      <Logo
-        icon="/trademarks/wordmark-dark.svg"
-        style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}
-      />
-      , where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      I'm Mark, a junior software developer 
+      and mathematician. I am particularly interested in quantum computing 
+      and building engineering projects at home.
     </>
   ),
 };
@@ -98,10 +94,9 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for
-        transforming complex challenges into simple, elegant design solutions.
-        Her work spans digital interfaces, interactive experiences, and the
-        convergence of design and technology.
+        Mark is a Toronto based researcher with a broad range of education in the sciences. He is currently
+        completing his final year in his Computer Science and Math dual degree and has had work experience covering topics from
+        Quantum computing to backend development. In his free time, he's built everything, from websites to watches to guitar effect pedals.
       </>
     ),
   },
