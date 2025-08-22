@@ -34,7 +34,7 @@ const social: Social = [
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/mark-deaconu-621b44220/",
   },
   {
     name: "Youtube",
@@ -66,9 +66,9 @@ const home: Home = {
   },
   subline: (
     <>
-      I'm Mark, a junior software developer 
+      I'm Mark, a software developer 
       and mathematician. I am particularly interested in quantum computing 
-      and building engineering projects at home.
+      and building engineering projects at home!
     </>
   ),
 };
@@ -94,115 +94,93 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Mark is a Toronto based researcher with a broad range of education in the sciences. He is currently
-        completing his final year in his Computer Science and Math dual degree and has had work experience covering topics from
-        Quantum computing to backend development. In his free time, he's built everything, from websites to watches to guitar effect pedals.
+        Mark is a Toronto-based researcher with a broad background in the sciences. He has had the opportunity to research on the cutting edge of quantum computation
+         and abstract algebra, and has been awarded gold medals in math olympiads. In his free time, he has built everything from websites to watches to guitar effect pedals.
+         He has also been part of the launch of two succesful startups, one in education, and the other in residential construction. 
       </>
     ),
   },
   work: {
-    display: true, // set to false to hide this section
-    title: "Work Experience",
-    experiences: [
-      {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
-        achievements: [
-          <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20%
-            increase in user engagement and 30% faster load times.
-          </>,
-          <>
-            Spearheaded the integration of AI tools into design workflows,
-            enabling designers to iterate 50% faster.
-          </>,
-        ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-      {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
-        achievements: [
-          <>
-            Developed a design system that unified the brand across multiple
-            platforms, improving design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line,
-            contributing to a 15% increase in overall company revenue.
-          </>,
-        ],
-        images: [],
-      },
-    ],
-  },
-  studies: {
-    display: true, // set to false to hide this section
-    title: "Studies",
-    institutions: [
-      {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
-      },
-      {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
-      },
-    ],
-  },
-  technical: {
-    display: true, // set to false to hide this section
-    title: "Technical skills",
-    skills: [
-      {
-        title: "Figma",
-        description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
-        ),
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-      {
-        title: "Next.js",
-        description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
-        ),
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-    ],
-  },
-};
+  display: true,
+  title: "Work Experience",
+  experiences: [
+    {
+      company: "SoftwareQ",
+      timeframe: "Jan 2025 - Present",
+      role: "Research Intern",
+      achievements: [
+        <>Collaborated with researchers at Nuquantum on a joint grant project to implement error correction on a distributed quantum architecture.</>,
+        <>Discovered efficient heuristic methods for scheduling quantum memory circuits corrected by hyperbolic Floquet codes.</>,
+        <>Designed an open source circuit visualization tool called staqvi.</>,
+      ],
+      images: [],
+    },
+    {
+      company: "Institute For Quantum Computing",
+      timeframe: "Apr 2024 - Present",
+      role: "Undergraduate Researcher — Dr. Michele Mosca",
+      achievements: [
+        <>Researched logical level circuit synthesis techniques over qubits and qudits.</>,
+        <>Created a novel Python library for synthesizing arithmetic matrix groups given a choice of generators.</>,
+        <>Presented at the IQC graduate student conference on quantum compilers, and at the IQC seminar series on simplicial complexes and Ramanujan graphs.</>,
+      ],
+      images: [],
+    },
+    {
+      company: "Queen's University",
+      timeframe: "Feb 2023 - Aug 2023",
+      role: "Undergraduate Researcher — Dr. Charles Paquette, Dr. Kaveh Mousavand",
+      achievements: [
+        <>Solved an open problem in quiver representation theory by connecting topics in formal language theory.</>,
+        <>Developed scripts for calculating endomorphism groups of modules.</>,
+      ],
+      images: [],
+    },
+    {
+      company: "Ad Astra Math",
+      timeframe: "Jun 2017 - Apr 2024",
+      role: "Instructor",
+      achievements: [
+        <>Taught over 300 hours of lectures.</>,
+      ],
+      images: [],
+    },
+  ],
+},
+studies: {
+  display: true,
+  title: "Studies",
+  institutions: [
+    {
+      name: "Perimeter Institute",
+      description: <>part of the PSI bridge theoretical physics program</>,
+    },
+    {
+      name: "University of Waterloo",
+      description: (
+        <>Undergraduate Summer Quantum Information Program — completed labs in Spin Qubits, NMR, Nonlinear Optics, Post-Quantum Cryptography, and QKD protocols.</>
+      ),
+    },
+    {
+      name: "Queen's University",
+      description: (
+        <>BS Computer Science and Math — Excellence Scholarship, 2× Dean's Honor List, Program GPA: 3.96. Leadership roles in Bioinformatics, Mathematics, and AI clubs. Completed graduate courses in functional analysis and probability.</>
+      ),
+    },
+  ],
+},
+technical: {
+  display: true,
+  title: "Technical Skills",
+  skills: [
+    {
+      title: "Programming Languages",
+      description: <>Python, C++, Tensorflow, Haskell, Prolog, mySQL</>,
+      images: [],
+    },
+  ],
+},
+}
 
 const blog: Blog = {
   path: "/blog",

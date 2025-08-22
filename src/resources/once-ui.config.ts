@@ -20,7 +20,7 @@ const routes: RoutesConfig = {
   "/about": true,
   "/work": true,
   "/blog": true,
-  "/gallery": true,
+  "/gallery": true
 };
 
 const display: DisplayConfig = {
@@ -194,9 +194,9 @@ const schema: SchemaConfig = {
 
 // social links
 const sameAs: SameAsConfig = {
-  threads: "https://www.threads.com/@once_ui",
+  threads: "https://www.threads.com",
   linkedin: "https://www.linkedin.com/in/mark-deaconu-621b44220/",
-  discord: "https://discord.com/invite/5EyAQ4eNdS",
+  discord: "https://discord.com",
 };
 
 export {
