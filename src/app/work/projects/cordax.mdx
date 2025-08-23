@@ -9,5 +9,44 @@ team:
   role: "Software Engineer"
   avatar: "/images/avatar.jpg"
   linkedIn: "https://www.linkedin.com/company/once-ui/"
-link: "https://once-ui.com/"
+link: "https://cordax.io/"
 ---
+
+## Story
+I joined this project about a month ago, when some engineering friends from Queen's promised me that creating their startup's product involved solving a problem that
+was so technically difficult, that it would be impossible for me to do. Reflecting back, this was an obvious bait to get me to do some free work for their company, but 
+either way I was hooked. 
+
+## Overview
+The team identified that there was a major inefficiency in how residential properties get built in comparison with commercial buildings. 
+In the case of the latter, the HVAC, electrical, and plumbing systems all get full 3D CAD models and the full tech suite treatment. For the former, these systems are hand drawn
+by an engineering consultantly, and then promptly ignored by the general contractor in favor of "eyeballing it". I don't blame them either, because the horror stories we've heard
+from job sites indicate theres a huge disconnect between the approval of initial plans, and what can actually be built once the real life constraints are incorporated. 
+
+The team invented Cordax to be a living document of a residential construction, that would be able to automatically route HVAC, electrical, and, plumbing systems around any obstacles introduced during 
+the lifetime of a project. This is how we did it.
+
+## Implementation
+
+- Asking the user to input architectural diagrams of each of the floors gives us a good starting point for the layout of the house
+- A mix of **computer vision** and manual annotations allow us to figure out where key fixtures are (structural walls, joists, vents, sinks, toilets, etc.)
+- We can discretize the 3d plan into a **3d lattice** of nodes in between joists and studs
+- We weigh edges in between nodes based on real life considerations eg. a cross joist edge must be higher cost than an edge along the joist
+- Using the **Melhorn algorithm** for finding Steiner trees, alows us to find a realistic path for routing each system
+
+## Key Features
+
+- **Conflict free routing**: our routing methods ensure that there are no conflicts in between the HVAC, plumbing, and electrical systems
+- **Adaptibility**: When there's new demands, or unforseen issues, the project can be updated, and rerouting is provided
+- **Shared project**: every team member gets to see and agree with every change made to the layout
+- **Ease of use**: Meant to be easy for anyone to use, makes 3D models on the fly without CAD knowledge from the user
+
+## Challenges
+
+The general contractors we've invited for our pilot program have each been in the buisness for 20+ years. They each have such unique ways of approaching construction, and they would prefer our program ahear to the principals they are used to.
+They want a design software that adapts to how they think, not how we think is most optimal. Marrying this principal, to the algorithms and mathematical models we have constructed has been by far the biggest challenge that we still face.
+
+## Learnings
+
+It's best to divide a project into modular pieces, where one piece is responsible solely for customization. For us, we decided that the weighing of edges in our 3d lattice is where there is the most opportunity for customization.
+A different set of weights, would provide a different route for the resultant Steiner tree. As so, all the customization features are related to this subroutine of weighing edges, rather than changing the underlying algorithm for finding the Steiner tree.
