@@ -66,8 +66,7 @@ const home: Home = {
   },
   subline: (
     <>
-      I'm Mark, a software developer 
-      and mathematician. I am particularly interested in quantum computing 
+      I'm Mark, a computing student in my last year. I am particularly interested in quantum computing 
       and building engineering projects at home!
     </>
   ),
@@ -106,7 +105,7 @@ const about: About = {
   experiences: [
     {
       company: "SoftwareQ",
-      timeframe: "Jan 2025 - Present",
+      timeframe: "Jan 2025 - Jun 2025",
       role: "Research Intern",
       achievements: [
         <>Collaborated with researchers at Nuquantum on a joint grant project to implement error correction on a distributed quantum architecture.</>,
@@ -117,12 +116,12 @@ const about: About = {
     },
     {
       company: "Institute For Quantum Computing",
-      timeframe: "Apr 2024 - Present",
+      timeframe: "Apr 2024 - May 2025",
       role: "Undergraduate Researcher — Dr. Michele Mosca",
       achievements: [
-        <>Researched logical level circuit synthesis techniques over qubits and qudits.</>,
-        <>Created a novel Python library for synthesizing arithmetic matrix groups given a choice of generators.</>,
-        <>Presented at the IQC graduate student conference on quantum compilers, and at the IQC seminar series on simplicial complexes and Ramanujan graphs.</>,
+        <>Wrote a paper about using number theoretic methods to build quantum circuits</>,
+        <>Created a novel Python package for synthesizing arithmetic matrix groups.</>,
+        <>Invited to present at the FoQaCIA conference at the INL in Braga, Portugal.</>,
       ],
       images: [],
     },
@@ -132,16 +131,15 @@ const about: About = {
       role: "Undergraduate Researcher — Dr. Charles Paquette, Dr. Kaveh Mousavand",
       achievements: [
         <>Solved an open problem in quiver representation theory by connecting topics in formal language theory.</>,
-        <>Developed scripts for calculating endomorphism groups of modules.</>,
       ],
       images: [],
     },
     {
       company: "Ad Astra Math",
-      timeframe: "Jun 2017 - Apr 2024",
+      timeframe: "Jun 2020 - Apr 2024",
       role: "Instructor",
       achievements: [
-        <>Taught over 300 hours of lectures.</>,
+        <>Taught over 200 hours of lectures in mathematics.</>,
       ],
       images: [],
     },
@@ -153,7 +151,7 @@ studies: {
   institutions: [
     {
       name: "Perimeter Institute",
-      description: <>part of the PSI bridge theoretical physics program</>,
+      description: <>Participating in the PSI bridge theoretical physics program - completed courses in quantum, classical, and statistical mechanics.</>,
     },
     {
       name: "University of Waterloo",
@@ -175,8 +173,9 @@ technical: {
   skills: [
     {
       title: "Programming Languages",
-      description: <>Python, C++, Tensorflow, Haskell, Prolog, mySQL</>,
+      description: <>Python, Javascript, SQL, Prolog, Haskell</>,
       images: [],
+      
     },
   ],
 },
@@ -185,7 +184,7 @@ technical: {
 const blog: Blog = {
   path: "/blog",
   label: "Blog",
-  title: "Writing about design and tech...",
+  title: "",
   description: `Read what ${person.name} has been up to recently`,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route
