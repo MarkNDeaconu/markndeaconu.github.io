@@ -17,8 +17,7 @@ const newsletter: Newsletter = {
   title: <>Subscribe to {person.name}'s Newsletter</>,
   description: (
     <>
-      I occasionally write about design, technology, and share thoughts on the
-      intersection of creativity and engineering.
+      
     </>
   ),
 };
