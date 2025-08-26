@@ -93,8 +93,8 @@ const about: About = {
     description: (
       <>
         Mark is a Toronto-based researcher with a broad background in the sciences. He has had the opportunity to research on the cutting edge of quantum computation
-         and abstract algebra, and has been awarded gold medals in math olympiads. In his free time, he has built everything from websites to watches to guitar effect pedals.
-         He has also been part of the launch of two succesful startups, one in education, and the other in residential construction. 
+         and abstract algebra, and has been awarded gold medals in math olympiads. In his free time, he has built everything from websites to watches to guitar FX circuits.
+         
       </>
     ),
   },

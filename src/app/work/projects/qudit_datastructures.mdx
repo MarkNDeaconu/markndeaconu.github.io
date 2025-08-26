@@ -1,13 +1,38 @@
 ---
 title: "Qudit Datastructures"
 publishedAt: "2025-03-16"
-summary: "Puchasing individual components of an automatic watch and assembling a custom build"
+summary: "Package for basic unitary operations used for testing qudit synthesis techniques"
 images:
-- "/images/projects/datastruc/datastruc1.gif"
+- "/images/projects/datastruc/quditdata2.gif"
 team:
 - name: "Mark Deaconu"
   role: "Software Engineer"
   avatar: "/images/avatar.jpg"
   linkedIn: "https://www.linkedin.com/in/mark-deaconu-621b44220/"
-link: "https://cordax.io/"
+link: "https://github.com/MarkNDeaconu/QuditSynthesis"
 ---
+## Story
+
+While working in Dr. Mosca's group at IQC, we spent an extensive ammount of time thinking about optimal qudit synthesis. This was for practical reasons 
+(eg. applications in TQC), but also because the math is interesting, and solutions could be insightful towards how one should go about multi-qubit synthesis.
+As the intern, I was initially tasked with figuring out if it was possible to prove certain lemmas with programming, especially ones involving finite groups.
+However, I found that frameworks for quantum computing were restrictive in one of 3 ways. 
+
+1. Too qubit based
+2. Too clifford based 
+3. (the worst) floating point based
+
+Dont get me wrong, the exponentiated pauli formalism is incredibly useful for Clifford+T based projects, and Oscar has some insane mathematical tricks, but 
+I was stuck in the middle, needing some of the features from both of those approaches. As so, my solution was to program the package I wished I had.
+
+## Workflow
+1. Start with a (possibly) localized cyclotomic field
+2. Build operators out of elements, don't worry! We handle their operations and let you hit them with functions
+3. Generate finite groups from operators
+4. Sample random elements from infinite groups
+5. See if one of our synth methods can reliably reduce the p-adic complexity of your sample
+
+## Limitations
+
+- Exact synthesis only, for now.
+- A lot of synthesis problems are research problems, and are thought to be np-hard. We cannot really help with those unless you have a million years of time to wait for a result.
