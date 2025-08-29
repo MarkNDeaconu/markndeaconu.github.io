@@ -88,57 +88,58 @@ const about: About = {
     link: "https://cal.com/mark-deaconu",
   },
   intro: {
-    display: true,
-    title: "Introduction",
-    description: (
-      <>
-        Mark is a Toronto-based researcher with a broad background in the sciences. He has had the opportunity to research on the cutting edge of quantum computation
-         and abstract algebra, and has been awarded gold medals in math olympiads. In his free time, he has built everything from websites to watches to guitar FX circuits.
-         
-      </>
-    ),
-  },
-  work: {
+  display: true,
+  title: "Introduction",
+  description: (
+    <>
+      Mark is a Toronto-based researcher with a broad background in the sciences. 
+      He has conducted research at the forefront of quantum computation and abstract algebra, 
+      and has been awarded gold medals in mathematics olympiads. 
+      In his free time, he builds projects ranging from websites and watches to guitar FX circuits.
+    </>
+  ),
+},
+work: {
   display: true,
   title: "Work Experience",
   experiences: [
     {
       company: "SoftwareQ",
-      timeframe: "Jan 2025 - Jun 2025",
+      timeframe: "Jan 2025 – Jun 2025",
       role: "Research Intern",
       achievements: [
-        <>Collaborated with researchers at Nuquantum on a joint grant project to implement error correction on a distributed quantum architecture.</>,
-        <>Discovered efficient heuristic methods for scheduling quantum memory circuits corrected by hyperbolic Floquet codes.</>,
-        <>Designed an open source circuit visualization tool called staqvi.</>,
+        <>Collaborated with researchers at NuQuantum on a joint grant project to implement error correction in distributed quantum architectures.</>,
+        <>Developed efficient heuristic methods for scheduling quantum memory circuits corrected by hyperbolic Floquet codes.</>,
+        <>Designed and released an open-source circuit visualization tool, <i>staqvi</i>.</>,
       ],
       images: [],
     },
     {
-      company: "Institute For Quantum Computing",
-      timeframe: "Apr 2024 - May 2025",
+      company: "Institute for Quantum Computing",
+      timeframe: "Apr 2024 – May 2025",
       role: "Undergraduate Researcher — Dr. Michele Mosca",
       achievements: [
-        <>Wrote a paper about using number theoretic methods to build quantum circuits</>,
-        <>Created a novel Python package for synthesizing arithmetic matrix groups.</>,
+        <>Authored a paper on applying number-theoretic methods to quantum circuit design.</>,
+        <>Developed a novel Python package for synthesizing arithmetic matrix groups.</>,
         <>Invited to present at the FoQaCIA conference at the INL in Braga, Portugal.</>,
       ],
       images: [],
     },
     {
       company: "Queen's University",
-      timeframe: "Feb 2023 - Aug 2023",
+      timeframe: "Feb 2023 – Aug 2023",
       role: "Undergraduate Researcher — Dr. Charles Paquette, Dr. Kaveh Mousavand",
       achievements: [
-        <>Solved an open problem in quiver representation theory by connecting topics in formal language theory.</>,
+        <>Resolved an open problem in quiver representation theory by linking concepts from formal language theory.</>,
       ],
       images: [],
     },
     {
       company: "Ad Astra Math",
-      timeframe: "Jun 2020 - Apr 2024",
+      timeframe: "Jun 2020 – Apr 2024",
       role: "Instructor",
       achievements: [
-        <>Taught over 200 hours of lectures in mathematics.</>,
+        <>Delivered over 200 hours of lectures in mathematics.</>,
       ],
       images: [],
     },
@@ -149,8 +150,17 @@ studies: {
   title: "Studies",
   institutions: [
     {
+      name: "Queen's University",
+      description: (
+        <>B.Sc. in Computer Science and Mathematics — Excellence Scholarship, 2× Dean's Honor List, Program GPA: 3.96. 
+        Held leadership roles in Bioinformatics, Mathematics, and AI clubs. 
+        Completed graduate-level courses in functional analysis and probability.</>
+      ),
+    },
+    {
+      
       name: "Perimeter Institute",
-      description: <>Participating in the PSI bridge theoretical physics program - completed courses in quantum, classical, and statistical mechanics.</>,
+      description: <>Participant in the PSI Bridge Theoretical Physics Program — completed courses in quantum, classical, and statistical mechanics.</>,
     },
     {
       name: "University of Waterloo",
@@ -158,12 +168,7 @@ studies: {
         <>Undergraduate Summer Quantum Information Program — completed labs in Spin Qubits, NMR, Nonlinear Optics, Post-Quantum Cryptography, and QKD protocols.</>
       ),
     },
-    {
-      name: "Queen's University",
-      description: (
-        <>BS Computer Science and Math — Excellence Scholarship, 2× Dean's Honor List, Program GPA: 3.96. Leadership roles in Bioinformatics, Mathematics, and AI clubs. Completed graduate courses in functional analysis and probability.</>
-      ),
-    },
+    
   ],
 },
 technical: {
@@ -172,12 +177,12 @@ technical: {
   skills: [
     {
       title: "Programming Languages",
-      description: <>Python, Javascript, SQL, Prolog, Haskell</>,
+      description: <>Python, JavaScript, SQL, Prolog, Haskell</>,
       images: [],
-      
     },
   ],
 },
+
 }
 
 const blog: Blog = {

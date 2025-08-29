@@ -13,26 +13,28 @@ link: "https://github.com/MarkNDeaconu/QuditSynthesis"
 ---
 ## Story
 
-While working in Dr. Mosca's group at IQC, we spent an extensive ammount of time thinking about optimal qudit synthesis. This was for practical reasons 
-(eg. applications in TQC), but also because the math is interesting, and solutions could be insightful towards how one should go about multi-qubit synthesis.
-As the intern, I was initially tasked with figuring out if it was possible to prove certain lemmas with programming, especially ones involving finite groups.
-However, I found that frameworks for quantum computing were restrictive in one of 3 ways. 
+While working in Dr. Mosca's group at IQC, we spent a significant amount of time thinking about optimal qudit synthesis. This was partly for practical reasons (e.g., applications in TQC), but also because the math is interesting, and the solutions could provide insights into how one should approach multi-qubit synthesis.  
 
-1. Too qubit based
-2. Too clifford based 
-3. (the worst) floating point based
+As the intern, I was initially tasked with exploring whether certain lemmas could be proven with programming, especially those involving finite groups. However, I quickly found that existing quantum computing frameworks were restrictive in one of three ways:  
 
-Dont get me wrong, the exponentiated pauli formalism is incredibly useful for Clifford+T based projects, and Oscar has some insane mathematical tricks, but 
-I was stuck in the middle, needing some of the features from both of those approaches. As so, my solution was to program the package I wished I had.
+1. Too qubit-based  
+2. Too Clifford-based  
+3. (the worst) Floating-point based  
+
+I needed a more fundamental, stripped-down approach that was reliable in the most general setting, so I built one.  
 
 ## Workflow
-1. Start with a (possibly) localized cyclotomic field
-2. Build operators out of elements, don't worry! We handle their operations and let you hit them with functions
-3. Generate finite groups from operators
-4. Sample random elements from infinite groups
-5. See if one of our synth methods can reliably reduce the p-adic complexity of your sample
+1. Start with a (possibly) localized cyclotomic ring  
+2. Build operators out of elements  
+3. Generate the orbits of a set of generators  
+4. Sample random elements from infinite groups  
+5. Test whether one of our synthesis methods can reliably reduce the x-adic complexity of your sample—or create your own  
+
+## Unique Features
+- Despite the wide range of possible cyclotomic rings, we provide common functions and operations that work uniformly on both elements and operators.  
+- All elements and operators are automatically converted into their x-adic reduced normal forms.  
+- All calculations are handled with integer arithmetic, ensuring there are no approximation errors.  
 
 ## Limitations
-
-- Exact synthesis only, for now.
-- A lot of synthesis problems are research problems, and are thought to be np-hard. We cannot really help with those unless you have a million years of time to wait for a result.
+- Exact synthesis only, for now.  
+- Many synthesis problems are research-level and are believed to be NP-hard. We can't really help with those—unless you're willing to wait a million years for a result.  
