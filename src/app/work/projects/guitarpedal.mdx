@@ -1,36 +1,33 @@
----
-title: "Building guitar pedals"
-publishedAt: "2025-03-12"
-summary: "Puchasing individual components of an automatic watch and assembling a custom build"
-images:
-- "/images/projects/pedal/pedal1.jpg"
-- "/images/projects/pedal/pedal2.jpg"
-- "/images/projects/pedal/pedal3.jpg"
-team:
-- name: "Mark Deaconu"
-  role: "Software Engineer"
-  avatar: "/images/avatar.jpg"
-  linkedIn: "https://www.linkedin.com/in/mark-deaconu-621b44220/"
-link: ""
----
 ## Story
 
-Sometimes when I play guitar, I don't sound too good. As any sane guitar player knows, the reason for this is because I haven't **purchased enough gear**.
-After some months of trading my hard earned cash for *tone boosting fx pedals*, little circuit boxes that change how a guitar sounds, I grew **tired**. 
-Maybe, the way to turn this addiction into a positive thing, is to build these little guys myself. The problem is, I have never soldered anything before and know nothing about how guitar pedals work.
+Sometimes when I play guitar, I don't sound too good. As any sane guitar player knows, the reason for this is because I haven't **purchased enough gear**.  
+After some months of trading my hard earned cash for *tone boosting fx pedals*, little circuit boxes that change how a guitar sounds, I grew **tired**.  
+Maybe, the way to turn this addiction into a positive thing is to build these little guys myself. The problem is, I have never soldered anything before and know nothing about how guitar pedals work.
 
+![My pedal](/images/projects/pedal/pedalbunch.png)
 
 ## Planning
-First, I ordered a soldering kit from China for 10 bucks. Unbeknownst to me, this was the first mistake of many. The kit came with a bunch of doo-dads and
-thingys that I did not recognize, along with a manual written in Chinese. The plan was, to first learn how to solder, then find some blueprints, then order the necessary parts.
-The blueprints to popular guitar pedals were surprisingly easy to find (email me and I'll send them to you), but sourcing the parts was more difficult. Apparently you can't just 
-go to canada computers and ask for "1 resistor please". There are actually a bunch of different types of them, and you have to order like 20 of the same one in order to get it delivered.
-Either way, I thought it's ok to invest in 19 extras of "ceramic 5/8, 0.07, 0603 resistor" because obviously every engineer worth his salt has a couple of those laying around.
-I actually managed to find 3 pedals with overlapping parts lists, so that with a small extra investment I could build all 3 instead of 1. Nice!
 
+First, I ordered a soldering kit from China for 10 bucks. Unbeknownst to me, this was the first mistake of many. The kit came with a bunch of doo-dads and thingys that I did not recognize, along with a manual written in Chinese. The plan was to first learn how to solder, then find some blueprints, then order the necessary parts.  
+The blueprints to popular guitar pedals were surprisingly easy to find (email me and I'll send them to you), but sourcing the parts was more difficult. Apparently you can't just go to Canada Computers and ask for "1 resistor please". There are actually a bunch of different types of them, and you have to order like 20 of the same one in order to get it delivered.  
+Either way, I thought it's ok to invest in 19 extras of "ceramic 5/8, 0.07, 0603 resistor" because obviously every engineer worth his salt has a couple of those laying around.  
+I actually managed to find 3 pedals with overlapping parts lists, so that with a small extra investment I could build all 3 instead of 1. Nice!
 ## Execution part 1 
-In order to avoid breathing in cheap solder,  I had to put together a humble ventilation system complete with two random fans I found in my basement. Starting with the first pcb, I fired up my soldering pen and pressed the stick of metal against it. I proceeded to make some unforgivalbly disgusting solders, so I also had to learn how to use the solder remover tool which came with my kit. After a few hours I finally got it and was able to make and remove solder from the pcb. Connecting the various parts was just a matter of following the blueprint at that point. 
+
+In order to avoid breathing in cheap solder, I had to put together a humble ventilation system complete with two random fans I found in my basement. Starting with the first pcb, I fired up my soldering pen and pressed the stick of metal against it. I proceeded to make some unforgivably disgusting solders, so I also had to learn how to use the solder remover tool which came with my kit. After a few hours I finally got it and was able to make and remove solder from the pcb. Connecting the various parts was just a matter of following the blueprint at that point. 
 
 ## Execution part 2
 
-When I went to test the first pedal it did not work at all. The pedal had a bypass mode for the guitar circuit, which did work, but the on position of the pedal just wouldnt produce any sound. As far as I was knew, there was almost no way that I could debug the system without any additional tools. So I decided that the only path forward was to restart and rebuilt the exact same pedal from scratch 
+When I went to test the first pedal it did not work at all. The pedal had a bypass mode for the guitar circuit, which did work, but the on position of the pedal just wouldn’t produce any sound. As far as I knew, there was almost no way that I could debug the system without any additional tools. So I decided that the only path forward was to restart and rebuild the exact same pedal from scratch. After the second try, I finally had success and the pedal worked great! I still couldn't tell the difference between the two copies that I had built, but I assumed that the circuit was shorting somewhere due to an improper solder.
+
+![My pedal](/images/projects/pedal/pedal1.jpg)
+
+## Using It
+
+I opted to not put the pedal in a case, because I actually loved how cool it looks without the case. This specific pedal was an overdrive pedal, based on the schematics for the "Zvex Super Hard On" effect pedal, that was supposed to always stay on in order to give a bit more bite to an amp's natural tone. I think the end result was really great for my first experience soldering and saved me a couple bucks too.
+
+![Zvex Super Hard On](/images/projects/pedal/superhard.png)
+
+## Reflection
+
+Moving forward I'm interested in buying more electrical gear that I can use to debug circuits that aren’t working. I'm interested in having more hands on knowledge about how electricity passes through the circuit, and what type of problems can arise in order to make me a more competent builder.  
