@@ -72,15 +72,16 @@ const fonts: FontsConfig = {
 
 // default customization applied to the HTML in the main layout.tsx
 const style: StyleConfig = {
-  theme: "dark", // dark | light | system
-  neutral: "gray", // sand | gray | slate | custom
-  brand: "emerald", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan | custom
-  accent: "orange", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan | custom
-  solid: "contrast", // color | contrast
-  solidStyle: "flat", // flat | plastic
-  border: "playful", // rounded | playful | conservative
-  surface: "translucent", // filled | translucent
-  transition: "micro", // all | micro | macro
+  theme: "dark",
+  brand: "custom",
+  accent: "blue",
+  neutral: "gray",
+  border: "conservative",
+  solid: "contrast",
+  solidStyle: "flat",
+  surface: "translucent",
+  transition: "none",
+
   scaling: "100", // 90 | 95 | 100 | 105 | 110
 };
 
