@@ -37,9 +37,9 @@ export default function Home() {
             onBackground="neutral-strong"
             textVariant="label-default-s"
             arrow={false}
-            href={"/work/cordax"}
+            href={"https://www.linkedin.com/in/mark-d-621b44220"}
           >
-            <Row paddingY="2">{'Recent Project: Cordax'}</Row>
+            <Row paddingY="2">{'Linkedin'}</Row>
           </Badge>
         </RevealFx>
       )}
