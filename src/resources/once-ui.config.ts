@@ -71,7 +71,7 @@ const fonts: FontsConfig = {
 };
 
 // default customization applied to the HTML in the main layout.tsx
-const style: StyleConfig = {
+const style = {
   theme: "dark",
   brand: "custom",
   accent: "blue",
