@@ -81,7 +81,6 @@ const style: StyleConfig = {
   solidStyle: "flat",
   surface: "translucent",
   transition: "none",
-
   scaling: "100", // 90 | 95 | 100 | 105 | 110
 };
 
