@@ -11,30 +11,35 @@ team:
   linkedIn: "https://www.linkedin.com/in/mark-deaconu-621b44220/"
 link: "https://github.com/MarkNDeaconu/QuditSynthesis"
 ---
-## Story
+# Escaping the Floating Point: A New Framework for Qudit Synthesis
 
-While working in Dr. Mosca's group at IQC, we spent a significant amount of time thinking about optimal qudit synthesis. This was partly for practical reasons (e.g., applications in TQC), but also because the math is interesting, and the solutions could provide insights into how one should approach multi-qubit synthesis.  
+While working with **Dr. Michele Mosca’s group** at the Institute for Quantum Computing (IQC), we fell down the rabbit hole of optimal *qudit* synthesis.
 
-As the intern, I was initially tasked with exploring whether certain lemmas could be proven with programming, especially those involving finite groups. However, I quickly found that existing quantum computing frameworks were restrictive in one of three ways:  
+This wasn't just for the love of the math (though the algebra is fascinating); we knew that solving synthesis problems for higher-dimensional systems (qudits) could provide critical insights into how we approach standard multi-qubit synthesis.
 
-1. Too qubit-based  
-2. Too Clifford-based  
-3. (the worst) Floating-point based  
+As the intern, I was initially tasked with a "simple" job: exploring whether certain lemmas involving finite groups could be proven programmatically. However, I hit a wall immediately. I found that every existing quantum computing framework was restrictive in one of three ways:
 
-I needed a more fundamental, stripped-down approach that was reliable in the most general setting, so I built one.  
+1.  Too obsessed with **Qubits** (ignoring the d-dimensional world).
+2.  Too focused on **Clifford** gates.
+3.  **(The worst one)** Reliant on **floating-point arithmetic**.
 
-## Workflow
-1. Start with a (possibly) localized cyclotomic ring  
-2. Build operators out of elements  
-3. Generate the orbits of a set of generators  
-4. Sample random elements from infinite groups  
-5. Test whether one of our synthesis methods can reliably reduce the x-adic complexity of your sample—or create your own  
+I needed a fundamental, stripped-down approach that was reliable in the most general settings. Since it didn't exist, I built it.
 
-## Unique Features
-- Despite the wide range of possible cyclotomic rings, we provide common functions and operations that work uniformly on both elements and operators.  
-- All elements and operators are automatically converted into their x-adic reduced normal forms.  
-- All calculations are handled with integer arithmetic, ensuring there are no approximation errors.  
+### The Workflow
+I designed the framework to handle the math exactly as it appears on the chalkboard:
 
-## Limitations
-- Exact synthesis only, for now.  
-- Many synthesis problems are research-level and are believed to be NP-hard. We can't really help with those—unless you're willing to wait a million years for a result.  
+1.  **Foundations:** Start with a (possibly) localized cyclotomic ring.
+2.  **Construction:** Build operators directly out of element primitives.
+3.  **Generation:** Generate the orbits of a set of generators.
+4.  **Sampling:** Sample random elements from infinite groups.
+5.  **The Test:** Verify if our synthesis methods can reliably reduce the chi-adic complexity of the sample, or use the tool to design your own method.
+
+### Why It's Different
+* **Zero Approximation:** This is the killer feature. All calculations are handled with **integer arithmetic**. There are no floating-point errors.
+* **Universal Logic:** Despite the wide range of possible cyclotomic rings, the tool provides common functions that work uniformly on both elements and operators.
+* **Auto-Normalization:** All elements and operators are automatically converted into their chi-adic reduced normal forms.
+
+### The Reality Check
+Of course, complexity theory still applies.
+* We are currently restricted to **exact synthesis** only.
+* Many of these synthesis problems are research-level and believed to be **NP-hard**. I can't really help you there—unless you have a million years to wait for the result.

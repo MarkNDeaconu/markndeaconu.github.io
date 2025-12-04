@@ -12,33 +12,40 @@ team:
 link: "https://cordax.io/"
 ---
 
-## Story
-I joined this project about a month ago, when some engineering friends from Queen's promised me that creating their startup's product involved solving a problem that was so technically difficult it would be impossible for me to do. Reflecting back, this was an obvious bait to get me to do some free work for their company, but either way I was hooked.  
+# Automating the Impossible: The Cordax Project
 
-## Overview
-The team identified that there was a major inefficiency in how residential properties get built in comparison with commercial buildings.  
+I joined this project about a month ago, after a group of engineering friends from Queen's approached me with a proposition. They claimed that building their startup's core product involved solving a problem so technically difficult, it was likely impossible for me to crack.
 
-In the case of the latter, the HVAC, electrical, and plumbing systems all get full 3D CAD models and the full tech suite treatment. For the former, these systems are hand-drawn by an engineering consultant, and then promptly ignored by the general contractor in favor of "eyeballing it." I don't blame them either, because the horror stories we've heard from job sites indicate there's a huge disconnect between the approval of initial plans and what can actually be built once the real-life constraints are incorporated.  
+Looking back, this was obvious bait to extract free labor from me. But the trap worked perfectly, I was hooked immediately.
 
-The team invented Cordax to be a living document of a residential construction, able to automatically route HVAC, electrical, and plumbing systems around any obstacles introduced during the lifetime of a project. This is how we did it.  
+### The Disconnect
+The team had identified a massive inefficiency in how residential properties are built compared to commercial ones.
 
-## Implementation
+In commercial construction, HVAC, electrical, and plumbing systems get the full treatment: 3D CAD models and comprehensive tech suites. In residential construction, these systems are often hand-drawn by an engineering consultant and then promptly ignored by the general contractor in favor of "eyeballing it."
 
-- Asking the user to input architectural diagrams of each of the floors gives us a good starting point for the layout of the house  
-- A mix of **computer vision** and manual annotations allows us to figure out where key fixtures are (structural walls, joists, vents, sinks, toilets, etc.)  
-- We can discretize the 3D plan into a **3D lattice** of nodes in between joists and studs  
-- We weigh edges in between nodes based on real-life considerations, e.g. a cross-joist edge must be higher cost than an edge along the joist  
-- Using the **Mehlhorn algorithm** for finding Steiner trees allows us to find a realistic path for routing each system  
+And honestly? I don't blame them. The horror stories we've heard from job sites reveal a huge disconnect between approved initial plans and what can physically be built once real-world constraints (like a load-bearing wall appearing where it shouldn't be) are introduced.
 
-## Key Features
+**Enter Cordax:** A living document for residential construction that automatically routes HVAC, electrical, and plumbing systems around obstacles in real-time.
 
-- **Conflict-free routing**: our routing methods ensure that there are no conflicts between the HVAC, plumbing, and electrical systems  
-- **Adaptability**: when there are new demands or unforeseen issues, the project can be updated and rerouting is provided  
-- **Shared project**: every team member gets to see and agree with every change made to the layout  
-- **Ease of use**: meant to be easy for anyone to use, creates 3D models on the fly without CAD knowledge from the user  
+![Cordax site](/images/projects/cordax/cordax_homepage.png)
 
-## Challenges
-The general contractors we've invited for our pilot program have each been in the business for 20+ years. They each have unique ways of approaching construction, and they would prefer our program adhere to the principles they are used to. They want design software that adapts to how they think, not how we think is most optimal. Marrying this principle to the algorithms and mathematical models we have constructed has been by far the biggest challenge we still face.  
+### How We Built It
+To turn "eyeballing it" into an algorithm, we had to digitize the intuition of a master builder.
 
-## Learnings
-It's best to divide a project into modular pieces, where one piece is responsible solely for customization. For us, we decided that the weighing of edges in our 3D lattice is where there is the most opportunity for customization. A different set of weights would provide a different route for the resultant Steiner tree. As such, all the customization features are related to this subroutine of weighing edges, rather than changing the underlying algorithm for finding the Steiner tree.  
+* **The Blueprint:** We start by ingesting architectural diagrams of each floor to establish the layout.
+* **Computer Vision:** We utilize CV and manual annotations to identify key constraints (structural walls, joists, vents, sinks, etc.).
+* **The Algorithm:** This is proprietary, but contact our company if you are interested and we can discuss!
+
+### The Human Challenge
+The math was hard, but the human element was harder.
+
+The general contractors in our pilot program have been in the business for 20+ years. They have unique, deeply ingrained methods for approaching construction. They didn't want a program that told them the mathematically "optimal" route; they wanted software that adapted to how *they* think.
+
+Marrying their intuition with our mathematical models has been our biggest hurdle.
+
+### The Solution: Modular Weighting
+Our breakthrough came from parameterizing the *algorithm*.
+
+We realized that the method we used allowed a large degree of customization. By adjusting the parameters, we could personalize the route without changing the algorithm.
+
+Now, instead of forcing a contractor to build "our way," we simply tune the algorithm to reflect their preferences, allowing the math to solve the problem exactly how they would, just a whole lot faster. 
