@@ -1,7 +1,54 @@
 ---
 title: "My experience at the FoQaCIA conference" 
-summary: "Magic Portfolio is a comprehensive, MDX-based, SEO-friendly, responsive portfolio template built with Once UI and Next.js."
+summary: "My Golden Gates talk at INL in the summer of 2025"
 image: "/images/blog/inl.jpg"
 publishedAt: "2025-05-19"
 tag: "Travel"
 ---
+
+# Golden Gates in Braga
+
+It was an absolute privilege to attend this year’s **FoQaCiA (Foundations of Quantum Computational Advantage)** conference in the historic city of Braga, Portugal.
+
+The event was hosted at the stunning **INL (International Iberian Nanotechnology Laboratory)**. On a personal note, this marked a significant milestone: my first-ever fully funded work trip, made possible thanks to Professor Yard. It feels like a rite of passage to finally travel for science!
+
+![In front of my hotel](/images/blog/braga.jpg)
+
+### The Challenge
+I was there to present my paper on quantum circuit synthesis. While I learned a great deal about contextuality and new frameworks for understanding "quantumness," the highlight of the trip was the reception of my own talk.
+
+Presenting to a crowd that doesn't primarily focus on circuits can be daunting, but the talk and poster were received incredibly well. However, the real learning moment came *after* the presentation.
+
+A senior researcher approached me to challenge one of the core claims of my talk: that **"Golden Gatesets,"** as defined by Peter Sarnak, are fundamentally more efficient for compiling quantum algorithms.
+
+> **The Objection:**
+> He pointed out that the Solovay-Kitaev algorithm for approximate gate synthesis produces circuits with sizes that seem independent of the specific gateset used. His conclusion? The chosen gateset shouldn't matter in the grand scheme of quantum computation.
+
+It was an eye-opening critique. The Solovay-Kitaev algorithm does indeed "muddy the waters" of intuition because it offers a universal solution that is "good enough" for many contexts. I hadn't explicitly prepared to defend against the idea that efficiency is gateset-invariant.
+
+![my presentation](/images/blog/markfoqacia.jpg)
+
+
+### The Resolution: A Circle in 2D
+Fortunately, I was able to bridge the gap using a simpler analogy: **2-dimensional synthesis on a circle.**
+
+I explained the problem of approximating a specific angle on a circle by taking multiples of a fixed, smaller angle.
+* **The Standard Approach:** If you take an incredibly small angle, you can eventually approximate any large angle quite well. However, this requires a massive number of steps (a large circuit length).
+* **The Golden Approach:** I showed him how a "Golden Gate" in 2D could achieve a similar approximation accuracy with a drastically shorter gate sequence.
+
+This 2D realization—that one instruction set can be geometrically superior to another—convinced him that the same phenomenon applies to 3D rotations (qubits). In fact, the effect is even more pronounced in 3D.
+
+We ended the conversation marveling at a beautiful mathematical coincidence: the **Clifford + T** gateset, which is derived simply from Pauli matrices, turns out to be a Golden Gateset—a connection highlighted by Sarnak in his famous letter to Scott Aaronson.
+
+![poster](/images/blog/poster.jpg)
+
+### Beyond the Physics
+This experience truly shifted my research mindset. Having to defend a theoretical claim against a strong counter-argument in real-time forced me to deepen my own understanding of the intuitive geometry behind the math.
+
+But the trip wasn't all work. I had the chance to immerse myself in the culture, food, and music of Portugal. It is a beautiful country, and exploring it alongside my co-authors, **Dr. Gargava** and **Professor Yard**, made the experience even better.
+
+From the technical debates at INL to the streets of Braga, this was a trip to remember.
+
+![grafiti1](/images/blog/guitarportugal.jpg)
+
+![grafiti2](/images/blog/grafitiportugal.jpg)

@@ -134,6 +134,38 @@ export interface About extends BasePageConfig {
     /** Description of the introduction section */
     description: React.ReactNode;
   };
+  /** Studies/education section */
+  studies: {
+    /** Whether to display studies section */
+    display: boolean;
+    /** Title for the studies section */
+    title: string;
+    /** List of institutions attended */
+    institutions: Array<{
+      /** Institution name */
+      name: string;
+      /** Description of studies */
+      description: React.ReactNode;
+    }>;
+  };
+  /** Publications section */
+  publications: {
+    /** Whether to display publications section */
+    display: boolean;
+    /** Title for the publications section */
+    title: string;
+    /** List of papers/publications */
+    papers: Array<{
+      /** Title of the paper */
+      title: string;
+      /** List of authors */
+      authors: string;
+      /** Journal or preprint server info */
+      journal: string;
+      /** Link to the paper (ArXiv, DOI, etc.) */
+      link?: string;
+    }>;
+  };
   /** Work experience section */
   work: {
     /** Whether to display work experience */
@@ -163,17 +195,31 @@ export interface About extends BasePageConfig {
       }>;
     }>;
   };
-  /** Studies/education section */
-  studies: {
-    /** Whether to display studies section */
+  /** Talks & Presentations section */
+  talks: {
+    /** Whether to display the talks section */
     display: boolean;
-    /** Title for the studies section */
+    /** Title for the talks section */
     title: string;
-    /** List of institutions attended */
-    institutions: Array<{
-      /** Institution name */
-      name: string;
-      /** Description of studies */
+    /** List of presentations */
+    presentations: Array<{
+      /** Title of the event or talk */
+      title: string;
+      /** Description or context of the talk */
+      description: React.ReactNode;
+    }>;
+  };
+  /** Awards & Honors section */
+  awards: {
+    /** Whether to display the awards section */
+    display: boolean;
+    /** Title for the awards section */
+    title: string;
+    /** List of awards */
+    list: Array<{
+      /** Title of the award */
+      title: string;
+      /** Description of the award */
       description: React.ReactNode;
     }>;
   };

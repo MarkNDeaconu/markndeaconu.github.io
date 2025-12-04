@@ -9,7 +9,7 @@ const person: Person = {
   avatar: "/images/avatar.jpg",
   email: "mark.deaconu@gmail.com",
   location: "America/Toronto", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "French", "Romainian"], // optional: Leave the array empty if you don't want to display languages
+  languages: ["English", "French", "Romanian"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter: Newsletter = {
@@ -88,102 +88,181 @@ const about: About = {
     link: "https://cal.com/mark-deaconu",
   },
   intro: {
-  display: true,
-  title: "Introduction",
-  description: (
-    <>
-      Mark is a Toronto-based researcher with a broad background in the sciences. 
-      He has conducted research at the forefront of quantum computation and abstract algebra, 
-      and has been awarded gold medals in mathematics olympiads. 
-      In his free time, he builds projects ranging from websites and watches to guitar FX circuits.
-    </>
-  ),
-},
-work: {
-  display: true,
-  title: "Work Experience",
-  experiences: [
-    {
-      company: "SoftwareQ",
-      timeframe: "Jan 2025 – Jun 2025",
-      role: "Research Intern",
-      achievements: [
-        <>Collaborated with researchers at NuQuantum on a joint grant project to implement error correction in distributed quantum architectures.</>,
-        <>Developed efficient heuristic methods for scheduling quantum memory circuits corrected by hyperbolic Floquet codes.</>,
-        <>Designed and released an open-source circuit visualization tool, <i>staqvi</i>.</>,
-      ],
-      images: [],
-    },
-    {
-      company: "Institute for Quantum Computing",
-      timeframe: "Apr 2024 – May 2025",
-      role: "Undergraduate Researcher — Dr. Michele Mosca",
-      achievements: [
-        <>Authored a paper on applying number-theoretic methods to quantum circuit design.</>,
-        <>Developed a novel Python package for synthesizing arithmetic matrix groups.</>,
-        <>Invited to present at the FoQaCIA conference at the INL in Braga, Portugal.</>,
-      ],
-      images: [],
-    },
-    {
-      company: "Queen's University",
-      timeframe: "Feb 2023 – Aug 2023",
-      role: "Undergraduate Researcher — Dr. Charles Paquette, Dr. Kaveh Mousavand",
-      achievements: [
-        <>Resolved an open problem in quiver representation theory by linking concepts from formal language theory.</>,
-      ],
-      images: [],
-    },
-    {
-      company: "Ad Astra Math",
-      timeframe: "Jun 2020 – Apr 2024",
-      role: "Instructor",
-      achievements: [
-        <>Delivered over 200 hours of lectures in mathematics.</>,
-      ],
-      images: [],
-    },
-  ],
-},
-studies: {
-  display: true,
-  title: "Studies",
-  institutions: [
-    {
-      name: "Queen's University",
-      description: (
-        <>B.Sc. in Computer Science and Mathematics — Excellence Scholarship, 2× Dean's Honor List, Program GPA: 3.96. 
-        Held leadership roles in Bioinformatics, Mathematics, and AI clubs. 
-        Completed graduate-level courses in functional analysis and probability.</>
-      ),
-    },
-    {
-      
-      name: "Perimeter Institute",
-      description: <>Participant in the PSI Bridge Theoretical Physics Program — completed courses in quantum, classical, and statistical mechanics.</>,
-    },
-    {
-      name: "University of Waterloo",
-      description: (
-        <>Undergraduate Summer Quantum Information Program — completed labs in Spin Qubits, NMR, Nonlinear Optics, Post-Quantum Cryptography, and QKD protocols.</>
-      ),
-    },
-    
-  ],
-},
-technical: {
-  display: true,
-  title: "Technical Skills",
-  skills: [
-    {
-      title: "Programming Languages",
-      description: <>Python, JavaScript, SQL, Prolog, Haskell</>,
-      images: [],
-    },
-  ],
-},
-
-}
+    display: true,
+    title: "Introduction",
+    description: (
+      <>
+        Mark is a Toronto-based researcher specializing in quantum computation and abstract algebra.
+        He is currently a student at Queen's University and the only Canadian accepted into the 2025 PSI Bridge cohort at the Perimeter Institute.
+        Beyond his research in distributed quantum architectures and circuit synthesis, he is a Math Olympiad Champion, 
+        a startup founder, and was recently featured on the front page of the Globe and Mail.
+      </>
+    ),
+  },
+  studies: {
+    display: true,
+    title: "Education",
+    institutions: [
+      {
+        name: "Queen's University",
+        description: (
+          <>
+            Bachelor of Computing, Mathematics Specialization — Core GPA: 3.975/4.3.
+            <br />
+            Recipient of the Excellence Scholarship ($1,500) and 2× Dean's Honor List.
+            Awarded Professional distinction for exceptional performance in a 1-year co-op placement.
+          </>
+        ),
+      },
+      {
+        name: "Perimeter Institute",
+        description: (
+          <>
+            PSI Bridge Program (May 2025 – Dec 2025).
+            <br />
+            Participated in a rigorous 8-month program focusing on Classical, Quantum, and Statistical Mechanics, and Lie Algebra theory.
+            Selected as the only Canadian student in a cohort of 16.
+          </>
+        ),
+      },
+      {
+        name: "University of Waterloo",
+        description: (
+          <>
+            Undergraduate Summer Quantum Information Program (June 2024 – Aug 2024).
+            <br />
+            Offered a full-time research co-op position upon successful completion of the intensive program.
+          </>
+        ),
+      },
+    ],
+  },
+  publications: {
+    display: true,
+    title: "Publications",
+    papers: [
+      {
+        title: "Buildings for Synthesis with Clifford+R",
+        authors: "Mark Deaconu, Nihar Gargava, Amolak Ratan Kalra, Michele Mosca, and Jon Yard",
+        journal: "arXiv e-prints, 2025",
+        link: "https://arxiv.org/abs/2510.11526",
+      },
+      {
+        title: "Infinite string bricks and Sturmian words over some gentle algebras",
+        authors: "Mark Deaconu, Kaveh Mousavand, and Charles Paquette",
+        journal: "arXiv e-prints, 2025",
+        link: "https://arxiv.org/abs/2510.22377",
+      },
+    ],
+  },
+  work: {
+    display: true,
+    title: "Work Experience",
+    experiences: [
+      {
+        company: "SoftwareQ",
+        timeframe: "Jan 2025 – April 2025",
+        role: "Research Intern",
+        achievements: [
+          <>Investigated distributed quantum computing methodologies, focusing on detecting and localizing errors and implementing hyperbolic Floquet codes.</>,
+          <>Designed a stochastic process in which circuit synthesis and device scheduling methods could inform each other and iteratively improve.</>,
+        ],
+        images: [],
+      },
+      {
+        company: "Institute for Quantum Computing",
+        timeframe: "April 2024 – April 2025",
+        role: "Undergraduate Researcher — Dr. Michele Mosca",
+        achievements: [
+          <>Leveraged Bruhat Tits theory to progress the understanding of the SU(3) subgroup associated with Clifford+R quantum circuits.</>,
+          <>Researched bounds on the stabilizer rank of states and characterized stabilizer states based on the Barnes-Wall lattice.</>,
+          <>Developed a software package for algebra over cyclotomic matrix algebras for qudit synthesis prototyping.</>,
+        ],
+        images: [],
+      },
+      {
+        company: "Queen's University",
+        timeframe: "Feb 2023 – Aug 2023",
+        role: "Undergraduate Researcher — Dr. Charles Paquette, Dr. Kaveh Mousavand",
+        achievements: [
+          <>Classified infinite dimensional Schur-Representations over quivers by connecting their combinatorial structure to Sturmian words.</>,
+        ],
+        images: [],
+      },
+      {
+        company: "Ad Astra Math",
+        timeframe: "Jun 2017 – Apr 2024",
+        role: "Math Instructor",
+        achievements: [
+          <>Served as the sole instructor for over 200 contest-level math classes (2-6 students each).</>,
+          <>Mentored two students that progressed to win gold medals at nationally recognized competitions.</>,
+        ],
+        images: [],
+      },
+    ],
+  },
+  talks: {
+    display: true,
+    title: "Talks & Presentations",
+    presentations: [
+      {
+        title: "FoQaCiA Conference (June 2025)",
+        description: <>Selected for a talk and poster presentation titled <i>"Arithmeticity of Qutrit Clifford+R Gate Set"</i>.</>,
+      },
+      {
+        title: "IQC Student Seminar (Feb 2025)",
+        description: <>Invited 1-hour presentation titled <i>"Ramanujan Graphs and Optimal Circuits"</i>.</>,
+      },
+      {
+        title: "IQC Graduate Student Conference (Sep 2024)",
+        description: <>Selected for a talk titled <i>"Quantum Circuit Synthesis"</i>.</>,
+      },
+    ],
+  },
+  awards: {
+    display: true,
+    title: "Awards & Honors",
+    list: [
+      {
+        title: "Math Olympiad Champion",
+        description: <>2nd Place in Canada (Galois Contest), 6 gold medals in national contests, and qualification to Repêchage in the COMC.</>,
+      },
+      {
+        title: "Innovation Award (2025)",
+        description: <>Recipient of the innovation award from the Association of Romanian Engineers in Canada (AREC).</>,
+      },
+      {
+        title: "Featured Startup (NEXT36 Venture Day 2025)",
+        description: <>Automation project <i>Cordax</i> showcased in a leading startup accelerator.</>,
+      },
+      {
+        title: "Globe and Mail Featured Story",
+        description: (
+          <>
+            Profiled on the front page of Canada's largest national newspaper for the charitable initiative{" "}
+            <a href="https://www.theglobeandmail.com/life/article-one-dollar-portraits-trinity-bellwoods-jasmine-boyd/">"Portraits in the Park"</a>.
+          </>
+        ),
+      },
+    ],
+  },
+  technical: {
+    display: true,
+    title: "Technical Skills",
+    skills: [
+      {
+        title: "Programming Tools",
+        description: <>Python, Git, Bash, C++, Javascript, PennyLane</>,
+        images: [],
+      },
+      {
+        title: "Course Work",
+        description: <>Functional analysis, Quantum mechanics, Number theory, Cryptography, Real & Complex analysis, Group theory, Statistical inference, Software architecture</>,
+        images: [],
+      },
+    ],
+  },
+};
 
 const blog: Blog = {
   path: "/blog",

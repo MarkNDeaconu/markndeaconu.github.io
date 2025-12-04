@@ -28,6 +28,7 @@ export async function generateMetadata() {
 }
 
 export default function About() {
+  // 1. UPDATE THE STRUCTURE ARRAY ORDER (This controls the Sidebar)
   const structure = [
     {
       title: about.intro.title,
@@ -35,14 +36,29 @@ export default function About() {
       items: [],
     },
     {
-      title: about.work.title,
+      title: about.work.title, // Work is now 1st
       display: about.work.display,
       items: about.work.experiences.map((experience) => experience.company),
     },
     {
-      title: about.studies.title,
+      title: about.publications.title, // Publications 2nd
+      display: about.publications.display,
+      items: about.publications.papers.map((paper) => paper.title),
+    },
+    {
+      title: about.studies.title, // Studies (Education) is now 3rd
       display: about.studies.display,
       items: about.studies.institutions.map((institution) => institution.name),
+    },
+    {
+      title: about.talks.title,
+      display: about.talks.display,
+      items: about.talks.presentations.map((talk) => talk.title),
+    },
+    {
+      title: about.awards.title,
+      display: about.awards.display,
+      items: about.awards.list.map((award) => award.title),
     },
     {
       title: about.technical.title,
@@ -50,6 +66,7 @@ export default function About() {
       items: about.technical.skills.map((skill) => skill.title),
     },
   ];
+
   return (
     <Column maxWidth="m">
       <Schema
@@ -65,6 +82,7 @@ export default function About() {
           image: `${baseURL}${person.avatar}`,
         }}
       />
+      
       {about.tableOfContent.display && (
         <Column
           left="0"
@@ -77,7 +95,9 @@ export default function About() {
           <TableOfContents structure={structure} about={about} />
         </Column>
       )}
+
       <Flex fillWidth mobileDirection="column" horizontal="center">
+        
         {about.avatar.display && (
           <Column
             className={styles.avatar}
@@ -105,7 +125,9 @@ export default function About() {
             )}
           </Column>
         )}
+
         <Column className={styles.blockAlign} flex={9} maxWidth={40}>
+          
           <Column
             id={about.intro.title}
             fillWidth
@@ -153,26 +175,26 @@ export default function About() {
                 {social.map(
                   (item) =>
                     item.link && (
-                        <React.Fragment key={item.name}>
-                            <Button
-                                className="s-flex-hide"
-                                key={item.name}
-                                href={item.link}
-                                prefixIcon={item.icon}
-                                label={item.name}
-                                size="s"
-                                weight="default"
-                                variant="secondary"
-                            />
-                            <IconButton
-                                className="s-flex-show"
-                                size="l"
-                                key={`${item.name}-icon`}
-                                href={item.link}
-                                icon={item.icon}
-                                variant="secondary"
-                            />
-                        </React.Fragment>
+                      <React.Fragment key={item.name}>
+                        <Button
+                          className="s-flex-hide"
+                          key={item.name}
+                          href={item.link}
+                          prefixIcon={item.icon}
+                          label={item.name}
+                          size="s"
+                          weight="default"
+                          variant="secondary"
+                        />
+                        <IconButton
+                          className="s-flex-show"
+                          size="l"
+                          key={`${item.name}-icon`}
+                          href={item.link}
+                          icon={item.icon}
+                          variant="secondary"
+                        />
+                      </React.Fragment>
                     ),
                 )}
               </Flex>
@@ -185,6 +207,7 @@ export default function About() {
             </Column>
           )}
 
+          {/* === 1. Work Experience (Moved to Top) === */}
           {about.work.display && (
             <>
               <Heading as="h2" id={about.work.title} variant="display-strong-s" marginBottom="m">
@@ -247,6 +270,37 @@ export default function About() {
             </>
           )}
 
+          {/* === 2. Publications (Filler to make Education 3rd) === */}
+          {about.publications.display && (
+            <>
+              <Heading as="h2" id={about.publications.title} variant="display-strong-s" marginBottom="m">
+                {about.publications.title}
+              </Heading>
+              <Column fillWidth gap="l" marginBottom="40">
+                {about.publications.papers.map((paper, index) => (
+                  <Column key={`${paper.title}-${index}`} fillWidth gap="4">
+                    <Text 
+                        id={paper.title} 
+                        variant="heading-strong-l"
+                        as={paper.link ? "a" : "span"}
+                        href={paper.link}
+                        style={{ textDecoration: 'none', cursor: paper.link ? 'pointer' : 'default' }}
+                    >
+                      {paper.title}
+                    </Text>
+                    <Text variant="body-default-s" onBackground="neutral-weak">
+                        {paper.authors}
+                    </Text>
+                    <Text variant="body-default-xs" onBackground="brand-weak">
+                        {paper.journal}
+                    </Text>
+                  </Column>
+                ))}
+              </Column>
+            </>
+          )}
+
+          {/* === 3. Studies / Education (Moved to 3rd) === */}
           {about.studies.display && (
             <>
               <Heading as="h2" id={about.studies.title} variant="display-strong-s" marginBottom="m">
@@ -258,7 +312,7 @@ export default function About() {
                     <Text id={institution.name} variant="heading-strong-l">
                       {institution.name}
                     </Text>
-                    <Text variant="heading-default-xs" onBackground="neutral-weak">
+                    <Text variant="body-default-m" onBackground="neutral-weak">
                       {institution.description}
                     </Text>
                   </Column>
@@ -267,6 +321,49 @@ export default function About() {
             </>
           )}
 
+          {/* === 4. Talks === */}
+          {about.talks.display && (
+            <>
+              <Heading as="h2" id={about.talks.title} variant="display-strong-s" marginBottom="m">
+                {about.talks.title}
+              </Heading>
+              <Column fillWidth gap="l" marginBottom="40">
+                {about.talks.presentations.map((talk, index) => (
+                  <Column key={`${talk.title}-${index}`} fillWidth gap="4">
+                    <Text id={talk.title} variant="heading-strong-l">
+                      {talk.title}
+                    </Text>
+                    <Text variant="body-default-m" onBackground="neutral-weak">
+                      {talk.description}
+                    </Text>
+                  </Column>
+                ))}
+              </Column>
+            </>
+          )}
+
+          {/* === 5. Awards === */}
+          {about.awards.display && (
+            <>
+              <Heading as="h2" id={about.awards.title} variant="display-strong-s" marginBottom="m">
+                {about.awards.title}
+              </Heading>
+              <Column fillWidth gap="l" marginBottom="40">
+                {about.awards.list.map((award, index) => (
+                  <Column key={`${award.title}-${index}`} fillWidth gap="4">
+                    <Text id={award.title} variant="heading-strong-l">
+                      {award.title}
+                    </Text>
+                    <Text variant="body-default-m" onBackground="neutral-weak">
+                      {award.description}
+                    </Text>
+                  </Column>
+                ))}
+              </Column>
+            </>
+          )}
+
+          {/* === 6. Technical Skills === */}
           {about.technical.display && (
             <>
               <Heading
@@ -315,6 +412,7 @@ export default function About() {
               </Column>
             </>
           )}
+
         </Column>
       </Flex>
     </Column>
